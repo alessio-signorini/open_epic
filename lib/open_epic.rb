@@ -1,5 +1,6 @@
 require 'fhir_client'
 require 'oauth2'
+require 'open_epic/patient'
 
 class OpenEpic
 
@@ -45,7 +46,11 @@ class OpenEpic
     OpenEpic::Patient.new(@client)
   end
 
+  def restore_oauth2_token(data)
+    @oauth2_token = OAuth2::AccessToken.from_hash(oauth2_client, data)
 
+    configure_fhir_client(@oauth2_token)
+  end
 
   private
 
