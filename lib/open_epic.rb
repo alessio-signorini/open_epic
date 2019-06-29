@@ -24,6 +24,20 @@ class OpenEpic
   end
 
 
+  def bad_method_name_that_is_too_long
+    first = 1
+    second = 2
+    third = 3
+    third
+
+
+
+  end
+
+
+
+
+
 
   def authorize_url
     oauth2_client.auth_code.authorize_url
