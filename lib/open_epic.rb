@@ -24,7 +24,7 @@ class OpenEpic
   end
 
 
-  def test_method
+  def test_method()
      first = 1
      second = 2
   end
