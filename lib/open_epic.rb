@@ -24,6 +24,10 @@ class OpenEpic
   end
 
 
+  def test_method()
+     first = 1
+     second = 2
+  end
 
   def authorize_url
     oauth2_client.auth_code.authorize_url
